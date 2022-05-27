@@ -4,11 +4,11 @@ using System.Text;
 
 namespace MessageBroker
 {
-    public static class Broker
+    public class Broker
     {
         #region Delegates
         public delegate void MessageReceivedHandler(string message);
-        public static event MessageReceivedHandler MessageReceived;
+        public event MessageReceivedHandler MessageReceived;
         #endregion
         public static void SendMessage(string message)
         {
@@ -38,7 +38,7 @@ namespace MessageBroker
             }
         }
 
-        public static void ReadMessage(string queueName)
+        public void ReadMessage(string queueName)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace MessageBroker
                 //TODO: Log error.
             }
         }
-        private static void ConsumerReceivedHandler(object? sender, BasicDeliverEventArgs e)
+        private void ConsumerReceivedHandler(object? sender, BasicDeliverEventArgs e)
         {
             try
             {
