@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using MessageBroker;
+
+Console.Title = "Luke";
+
+var message = "Hello my name is, Luke.";
+
+Broker.SendMessage(message);
