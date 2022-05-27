@@ -11,7 +11,7 @@ static void MessageReceived(string message)
     {
         if(!string.IsNullOrEmpty(message))
         {
-            var name = message.Split(',')[1].TrimStart();
+            var name = message.Split(',')[1].TrimStart().TrimEnd('.');
 
             Console.WriteLine($"Hello {name}, I am your father!");
         }
