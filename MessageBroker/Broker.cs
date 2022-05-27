@@ -38,7 +38,7 @@ namespace MessageBroker
             }
         }
 
-        public void ReadMessage(string queueName)
+        public async void ReadMessage(string queueName)
         {
             try
             {
@@ -57,6 +57,8 @@ namespace MessageBroker
                         consumer.Received += ConsumerReceivedHandler;
 
                         channel.BasicConsume(Constants.StarWarsQueueName, autoAck: true, consumer);
+
+                        await Task.Delay(10);
                     }
                 }
             }
