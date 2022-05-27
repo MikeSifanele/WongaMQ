@@ -4,3 +4,11 @@ MessageBroker/.vs/
 MessageBroker/obj/
 
 *.sln
+
+MessageBroker/bin/
+
+LukeSkywalker/.vs/
+
+LukeSkywalker/bin/
+
+LukeSkywalker/obj/
