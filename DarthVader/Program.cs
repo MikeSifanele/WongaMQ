@@ -2,10 +2,11 @@
 
 Console.Title = "Darth Vader";
 
-Broker.MessageReceived += MessageReceived;
-Broker.ReadMessage(Constants.StarWarsQueueName);
+var broker = new Broker();
+broker.MessageReceived += MessageReceived;
+broker.ReadMessage(Constants.StarWarsQueueName);
 
-static void MessageReceived(string message)
+void MessageReceived(string message)
 {
     try
     {
