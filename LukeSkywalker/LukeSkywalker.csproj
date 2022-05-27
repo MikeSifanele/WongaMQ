@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="MessageBroker">
+      <HintPath>..\MessageBroker\bin\Debug\net6.0\MessageBroker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
